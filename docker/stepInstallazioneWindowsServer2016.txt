@@ -1,0 +1,20 @@
+**passi installazione docker su Windows Server 2016**
+
+Install-Module -Name DockerMsftProvider -Repository PSGallery –Force
+
+y
+
+Install-Package -Name docker -ProviderName DockerMsftProvider -verbose
+
+y
+
+riavvio host
+
+get-service docker
+
+start-service docker
+
+docker version
+
+docker run hello-world
+

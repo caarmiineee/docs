@@ -1,0 +1,13 @@
+***gestire docker come utente-non-root***
+
+1) creazione gruppo docker -> sudo groupadd docker
+
+2) aggiunta utente al gruppo Docker -> sudo usermod -aG docker $USER
+
+3) riavvio host.
+
+4) test -> docker run hello-world
+
+***abilitare docker per avviarsi all'avvio***
+
+1) sudo systemctl enable docker

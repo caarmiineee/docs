@@ -1,0 +1,7 @@
+Che cos'è un hypervisor?
+ 
+L'hypervisor, noto anche come monitor della macchina virtuale, è un processo che crea e gestisce le macchine virtuali (VM). Un hypervisor permette a un computer host di supportare più VM guest attraverso la condivisione virtuale delle risorse (come quelle di elaborazione e memoria).
+
+Che cos'è un Template?
+
+Il termine inglese template ([ˈtɛmplɪt], letteralmente "sagoma" o "calco"[1]) in informatica indica un documento o programma nel quale, come in un foglio semicompilato cartaceo, su una struttura generica o standard esistono spazi temporaneamente "bianchi" da riempire successivamente. In questo ambito, la parola in italiano è traducibile come "modello", "semicompilato", "schema", "struttura base", "ossatura generale" o "scheletro", o più correntemente "modulo", anche se di solito non così elaborato e sofisticato.

@@ -1,0 +1,25 @@
+docker network create -d overlay overnet
+
+docker network inspect overnet
+
+
+eseguire sul nodo manager:
+docker swarm init 
+
+eseguire sul nodo worker:
+docker swarm join --token SWMTKN-1-4qp9q3ulilunpufnrdtt6evosvx9oeiywfrqwghmm1wisdbfwx-92ock3m0hswkkduzsy8xho4n7 10.0.0.32:2377
+
+creazioneservizio:
+
+docker service create --name mioservizio --network overnet --replicas 10 alpine sleep 10h
+
+verifica:
+
+docker service ls
+
+docker service ps mio_servizio
+
+docker network inspect overnet
+
+
+

@@ -1,0 +1,7 @@
+docker run -p 8080:8080 -p 50000:50000 --name jenkinsprimo -v volumeTest:/var/jenkins_home jenkins
+
+
+
+docker run -p 8081:8080 -p 50001:50000 --name jenkinssecondo -v volumeTest:/var/jenkins_home jenkins
+
+418e3c69ce5c4b2daed83722d60a09d2
