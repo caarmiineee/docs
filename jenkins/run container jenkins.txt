@@ -1,0 +1,39 @@
+
+Per installare Jenkins utilizzando Docker, puoi seguire i seguenti passaggi:
+
+Installare Docker:
+Assicurati di avere Docker installato sul tuo sistema. Puoi scaricare Docker dal sito ufficiale: Docker.
+
+Creare una rete Docker:
+Puoi creare una rete Docker per Jenkins in modo che i container possano comunicare tra di loro.
+
+bash code: 
+docker network create jenkins
+
+Creare un volume Docker per persistenza dei dati:
+Per garantire che i dati di Jenkins siano persistenti, puoi creare un volume Docker.
+
+bash code
+docker volume create jenkins_home
+
+Eseguire il container Jenkins:
+Puoi utilizzare l'immagine Docker ufficiale di Jenkins. Assicurati di montare il volume creato e di collegare il container alla rete creata.
+
+bash code
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --network jenkins --volume jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
+Questo comando eseguirà Jenkins in background e aprirà le porte 8080 e 50000. La porta 8080 è utilizzata per accedere all'interfaccia utente di Jenkins, mentre la porta 50000 è utilizzata 
+per la comunicazione tra agenti Jenkins.
+
+Recuperare la password di Jenkins:
+Dopo l'esecuzione del container, puoi ottenere la password iniziale di Jenkins dal log.
+
+bash code:
+docker logs jenkins
+
+Cerca una riga che inizia con "Please use the following password to proceed to installation" e segui le istruzioni per recuperare la password.
+
+Accedere all'interfaccia di Jenkins:
+Apri il tuo browser e vai a http://localhost:8080. Inserisci la password che hai ottenuto dal passo precedente. Segui le istruzioni guidate per completare l'installazione di Jenkins.
+
+Ora dovresti avere Jenkins installato e in esecuzione nel tuo ambiente Docker. Puoi personalizzare ulteriormente la configurazione di Jenkins in base alle tue esigenze specifiche.
